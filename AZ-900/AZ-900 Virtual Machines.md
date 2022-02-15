@@ -1,4 +1,4 @@
-# Quick introduction
+# Quick introduction / Notes
 
 1. Pag nagdedeploy ng VM, madaming kasamang nadedeploy din (hindi lang magisa si VM)
    - VM
@@ -18,6 +18,9 @@
    - One reason is dahil sa restrictions sa regions (sa free account)
 6. Your compute service on the Azure platform
 7. You can choose from different OS from WinServer to Linux
+8. There's a limit to how many VMs you can create (depending on your subscription)
+   - Check Subscription then Usage + Quotas
+9. A resource can only be mapped to ONE resource group and ONE subscription
 
 # Virtual Machine Types
 
@@ -63,3 +66,40 @@
 5. Disassociate the IP from the machine
 6. Set the IP address to static
 7. Associate the IP address to the machine again
+
+# VM Region Rationale
+
+## Why and how to choose a region?
+
+- Whenever you create a resource, kailangan pa rin ng physical infrastructure.
+- The closer you are to the resource, the less latency.
+- Cost varies from region to region.
+- Some regions don't support other services
+- Apps on different availability sets **are not** synced
+
+# Azure Marketplace for Virtual Machines
+
+- All the prebuilt templates come from the marketplace
+- The software cost (e.g. Bitnami) is separate from the VM cost.
+
+# Availability Sets
+
+- Your resources will be added to a fault domain and an update domain
+- Used to protect your VMs against any updates or faults within the **physical infrastructure**
+- You cannot add an existing VM to an availability set
+
+## Fault Domain
+
+- Different servers with separate network/power/etc.
+- Pag gumawa ka ng VM na part ng availability set, each VM will be put on a different server.
+- It is **your** responsibility to add the VM to an availability set.
+
+## Update Domain
+
+- Pag nagupdate si Microsoft ng server, may fault tolerance din dapat.
+
+# Availability Zones
+
+- Each availability zone is a collection of one or more data centers
+- Same concept lang sa AWS
+- Only cost to think about is communication of VMs within two different AZs
