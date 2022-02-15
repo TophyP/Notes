@@ -110,3 +110,7 @@
 - There's an option to reserve the **entire** host to you-- meaning walang ibang customer na makakagamit ng host na gamit mo.
 - You get to control the maintenance events
 - Only HUUUUUGE companies can do this kasi may required number of vCPUs
+
+# Workload
+
+- Unit of functionality (either an application or service)
