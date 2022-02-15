@@ -114,3 +114,14 @@
 # Workload
 
 - Unit of functionality (either an application or service)
+
+# Important Points
+
+- May 750 hours of compute ONLY per month for B1S VM size
+- VM costing depends on several factors like the amount of time it runs, region, and OS
+  - You can stop (deallocate) the VM para di ka macharge sa **compute** cost
+  - Stopping (deallocating) will still charge you for other aspects like OS disk
+- **Fault domains** are used to define a group of VMs that share a common source and network switch. Pwede hanggang 3.
+- **Update domains** are used to group VMs and physical hardware na pwede ireboot at the same time. Pwede hanggang 20.
+- Deploying two or more VMs in an availability set will guarantee connectivity to **at least 1 VM 99.95% of the time**
+- Availability Zones naman, physical buildings. Guaranteed 99.99% availability
