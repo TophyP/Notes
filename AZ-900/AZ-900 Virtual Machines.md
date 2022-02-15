@@ -100,6 +100,13 @@
 
 # Availability Zones
 
+- Protects against **data center level failure**
 - Each availability zone is a collection of one or more data centers
 - Same concept lang sa AWS
 - Only cost to think about is communication of VMs within two different AZs
+
+# Azure Dedicated Host
+
+- There's an option to reserve the **entire** host to you-- meaning walang ibang customer na makakagamit ng host na gamit mo.
+- You get to control the maintenance events
+- Only HUUUUUGE companies can do this kasi may required number of vCPUs
